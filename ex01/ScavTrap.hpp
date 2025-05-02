@@ -1,5 +1,5 @@
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
 
 #include "ClapTrap.hpp"
 #include <iostream>
@@ -7,24 +7,6 @@
 #include <cctype>
 #include <limits.h>
 
-class ScavTrap : public ClapTrap {
-{
-	private:
-		std::string		_name;
-		unsigned int	_hitPoint;
-		unsigned int	_energyPoint;
-		unsigned int	_attackDamage;
-	public:
-		std::string	getName(void) const;
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-	
-		ClapTrap& operator=(const ClapTrap &claptrap);
-
-		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap &f);
-		~ClapTrap(void);
-};
+class ScavTrap : public ClapTrap {};
 
 #endif

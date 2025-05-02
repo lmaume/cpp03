@@ -1,5 +1,5 @@
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef CLAPTRAP_H
+# define CLAPTRAP_H
 
 #include <iostream>
 #include <iomanip>
