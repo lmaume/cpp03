@@ -1,8 +1,13 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "Default ClapTrap constructor called" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default ClapTrap constructor called" << std::endl;
 	this->_name = name;
 	this->_hitPoint = 100;
 	this->_energyPoint = 50;
@@ -17,7 +22,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &claptrap)
@@ -33,7 +38,13 @@ std::string	ClapTrap::getName() const
 
 void ClapTrap::attack(const std::string& target)
 {
-	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+	if (_energyPoint == 0 || _hitPoint == 0)
+		std::cout << "claprtap no atack no energy or life" << std::endl;
+	else
+	{
+		_energyPoint--;
+		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+	}
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {
@@ -54,7 +65,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (amount <= 0 || _energyPoint == 0)
+	if (amount <= 0 || _energyPoint == 0 || _hitPoint == 0)
 		std::cout << "No reparation for ClapTrap " << _name << "." << std::endl;
 	else
 	{

@@ -1,5 +1,5 @@
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#ifndef FRAGTRAP_H
+# define FRAGTRAP_H
 
 #include "ClapTrap.hpp"
 #include <iostream>
@@ -7,17 +7,17 @@
 #include <cctype>
 #include <limits.h>
 
-class ScavTrap : public ClapTrap
+class FragTrap : public ClapTrap
 {
 	private:
 
 	public:
 		void attack(const std::string& target);
-		void guardGate();
+		void highFivesGuys();
 
-		ScavTrap(std::string name);
-		ScavTrap(const ScavTrap &f);
-		~ScavTrap(void);
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &f);
+		~FragTrap(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 #    By: lmaume <lmaume@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 15:13:38 by lmaume            #+#    #+#              #
-#    Updated: 2025/05/02 14:33:40 by lmaume           ###   ########.fr        #
+#    Updated: 2025/05/02 15:00:32 by lmaume           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = claptrap
 SRCS =	main.cpp		\
 		ClapTrap.cpp	\
 		ScavTrap.cpp	\
+		FragTrap.cpp	\
 
 CXX = c++
 
